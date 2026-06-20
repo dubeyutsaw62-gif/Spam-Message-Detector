@@ -14,7 +14,7 @@ def load_zero_shot():
 classifier = load_zero_shot()
 
 # --- USER INTERFACE ---
-st.title("🧠 Zero-Shot AI Spam Guard")
+st.title(" Zero-Shot AI Spam Guard")
 st.markdown("""
 This prototype doesn't rely on narrow spam datasets. It uses **Zero-Shot Learning** to logically deduce if a message matches the definition of a scam or a normal conversation.
 """)
@@ -41,10 +41,10 @@ if st.button("Analyze with AI"):
             # --- DISPLAY RESULTS ---
             st.write("---")
             if "scam" in winning_label:
-                st.error(f"🚨 **RESULT: SPAM** (Confidence: {winning_score:.2%})")
+                st.error(f" **RESULT: SPAM** (Confidence: {winning_score:.2%})")
                 st.info("The AI logically matched this to manipulative or promotional behavior.")
             else:
-                st.success(f"✅ **RESULT: HAM (Safe)** (Confidence: {winning_score:.2%})")
+                st.success(f" **RESULT: HAM (Safe)** (Confidence: {winning_score:.2%})")
                 st.info("The AI recognizes this as standard, safe human conversation.")
                 
     else:
